@@ -2,8 +2,8 @@ var fs = require('fs');
 var path = require('path');
 var gameData = require('./gameData');
 
-var logger = require('./logger');
-var filePath = path.join(__dirname, './cache.json');//C:\Users\PC\Desktop\脚本双开\自定义\utils\cache.json
+var filePath = path.join(__dirname, './cache.json');
+
 // 基础配置
 var CACHE = {
     'DEBUG': false, // 开关调试日志记录
@@ -19,7 +19,6 @@ var CACHE = {
         'cooperateType': false,  // 合作 - 优先顺序：1
         'cooperateRoomType': false,  // 合作/开房进房 - 优先顺序：1
         'arenaType': false,  // 竞技场 - 优先顺序：2 - 可能一直刷下去，如果想刷 pvp 关闭设置 false
-        'sjcTry': false,  // 孙进超测试
     },
 
     'version': {}, // 版本相关信息
@@ -281,6 +280,7 @@ function userCacheInit(CACHE, openId) {
                                 32, // 成长球球
                                 44, // 复制球球
                                 39, // 升星球球
+                                20, // 合体球球
                             ].includes(ballItem.ballType)) {
                                 return false;
                             }

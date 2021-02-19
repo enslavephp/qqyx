@@ -2,10 +2,11 @@
 var app = express();
 var api = require('./lib/api');
 var logger = require('./utils/logger');
-var port = 12312;
+var port = 8098;
 var CACHE = require('./utils/cache');
 var args = process.argv.splice(2); // 启动参数
 //require('./socket');
+
 var server = app.listen(port, function () {
     var host = server.address().address;
     var port = server.address().port;
@@ -30,10 +31,6 @@ function initConfig(runMode) {
     CACHE.autoPlay.cooperateType = false;
     CACHE.autoPlay.arenaType = false;
     switch (runMode) {
-        case 'sjc':
-            logger("[运行模式] 孙进超测试模式");
-            CACHE.autoPlay.sjcTry = true;
-            break;
         case 'cooperateType':
             logger("[运行模式] 合作模式");
             CACHE.autoPlay.cooperateType = true;

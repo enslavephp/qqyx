@@ -1,11 +1,4 @@
 
-cls
-echo 孙进超测试模式正在启动
-mode con cols=100 lines=100
-node index.js notAuto
-PAUSE >nul
-Goto sc_main
-
 @Echo Off
 TITLE 球球英雄辅助
 :start

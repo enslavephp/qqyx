@@ -7,7 +7,7 @@ runic.send("启动游戏")
 ]]
 local Runic = {}
 local callback
-local url = "http://192.168.1.153:8098/api.php" -- 
+local url = "http://192.168.0.111:8098/api.php" --
 _G["DEBUG"] = 4
 _G["LOG_LEVEL"] = 1
 _G["RPC_LOG_LEVEL"] = "verbose"
